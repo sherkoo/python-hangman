@@ -2,7 +2,11 @@
 # @Language: Python
 # @Author: Stephen
 
-word = "disturbed"
+import random
+
+word_list = ["disturbed", "korn", "limpbizkit", "slipknot", "deftones", "metallica"]
+word_rnd = random.randint(0, len(word_list))
+word = word_list[word_rnd]
 word_len = len(word)
 word_guess = []
 
