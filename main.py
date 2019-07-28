@@ -2,10 +2,14 @@
 # @Language: Python
 # @Author: Stephen
 
-word = "testerman"
+word = "disturbed"
 word_len = len(word)
-word_guess = ["_","_","_","_","_","_","_","_","_"]
-tries_max = word_len - (word_len / 2)
+word_guess = []
+
+for x in range(word_len):
+    word_guess.append("_ ")
+
+tries_max = word_len - (word_len / 2) + 3
 tries = 0
 playing = True
 
@@ -28,7 +32,7 @@ while playing:
     found = [pos for pos, char in enumerate(word) if char == guess]
     # insert letter X found times
     for f in found:
-        print(f)
+        # print(f)
         word_guess[f] = guess
 
     print(word_guess)
