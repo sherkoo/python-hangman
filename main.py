@@ -7,7 +7,7 @@ word_len = len(word)
 word_guess = []
 
 for x in range(word_len):
-    word_guess.append("_ ")
+    word_guess.append("_")
 
 tries_max = word_len - (word_len / 2) + 3
 tries = 0
@@ -23,7 +23,7 @@ def split(word):
 
 # While user hasn't reached max tries
 while playing:
-  guess = raw_input("Guess a letter: ")
+  guess = raw_input("Guess a letter: ").lower()
 
   if guess in word:
     # User guesses a correct letter
